@@ -18,7 +18,7 @@ const render = allEateries => {
         <option value="0"> Select an eatery: </option>
         ${allEateries.map(
         eateryObj => {
-            console.log(eateryObj)
+            console.log(eateryObj.state)
             return `<option value="${eateryObj.id}">${eateryObj.businessName}</option>`
         }
     ).join("")
@@ -26,3 +26,6 @@ const render = allEateries => {
     </select>
    `
 }
+
+// TODO:
+    // 1. Match id (which is a state code) of State Dropdown and find (Array.find() method? ) the eatery whose eaterObj.state matches that value
