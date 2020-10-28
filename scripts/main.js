@@ -1,7 +1,6 @@
+import { getAttractions, useAttractions } from "./attractions/AttractionProvider.js";
 import { getParks, useParks } from "./parks/ParkProvider.js";
 
-getParks().then(
-    () => console.log(useParks())
+getAttractions().then(
+    () => console.log(useAttractions())
 )
-
-console.log("hello")
