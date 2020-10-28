@@ -1,28 +1,33 @@
 import { getAttractions, useAttractions } from "./AttractionProvider.js"
 
-const state = document.getElementById("stateSelect")
-const attractionsSelect = document.querySelector(".attractionDropdown")
-const eventHub = document.querySelector(".container")
+const attractionsSelect = document.querySelector("#attractionSelect")
+const eventHub = document.querySelector("#container")
 
-const populateAttractionMenu = (stateCode) => {
-    const bizzararies = getAttractions().then(
-        useAttractions().filter(stateObj => {
-        return stateObj.state = stateCode
-    }))
+export const populateAttractionMenu = (stateCode) => {
+    let attractions = []
+    getAttractions().then(() => {
+        attractions = useAttractions()
+        console.log(attractions)
+        const filteredAttractions = attractions.filter(stateObj => {
+            return stateObj.state === stateCode
+        })
+        console.log(filteredAttractions)
+        const htmlToAssign = filteredAttractions.map(attraction => {
+            return `
+                <option value="${attraction.id}">${attraction.name}</option> 
+            `
+        });
+        attractionsSelect.innerHTML = htmlToAssign
+    })
 
-    const htmlToAssign = bizzararies.map(attraction => {
-        return `
-            <option value="${attraction.id}">${attraction.name}> 
-        `
-    });
-
-    attractionsSelect.innerHTML = `<select name="attractionSelect" id="attractionSelect"> ` + htmlToAssign + `</select>`
 }
 
-eventHub.addEventListener("broadcastState", e => {
-    populateAttractionMenu(e.detail.stateCode)
-    }
-)
+export const addAttractionListener = () => {
+    eventHub.addEventListener("broadcastState", e => {
+        console.log(e.detail.stateCode)
+        populateAttractionMenu(e.detail.stateCode)
+        })
+}
 
 
 

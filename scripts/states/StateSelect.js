@@ -70,7 +70,7 @@ const stateSelector = document.getElementById("stateSelect")
 stateSelector.addEventListener("change", e => {
         const stateID = stateSelector.value
         const state = stateSelector.options[stateSelect.selectedIndex].text
-        const stateCode = stateSelector.options[stateSelect.selectedIndex].id
+        const stateCode = `${stateSelector.options[stateSelect.selectedIndex].id}`
         console.log(state, stateCode)
         const stateBroadcast = new CustomEvent("broadcastState", {
             detail: {
@@ -80,5 +80,5 @@ stateSelector.addEventListener("change", e => {
 
             }
         })
-        dispatchEvent(stateBroadcast)
+        eventHub.dispatchEvent(stateBroadcast)
     })
