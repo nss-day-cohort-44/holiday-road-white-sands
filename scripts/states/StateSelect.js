@@ -1,7 +1,7 @@
 const eventHub = document.querySelector(".container")
 const stateSelect = document.getElementById("stateSelect")
 
-const stateChanged = () => {
+export const stateChanged = () => {
     stateSelect.addEventListener("change", e => {
         const stateID = stateSelect.value
         const state = stateSelect.options[stateSelect.selectedIndex].text
