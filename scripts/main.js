@@ -4,6 +4,7 @@ import { getParks, useParks } from "./parks/ParkProvider.js";
 import { getEateries, useEateries } from "./eateries/EateryProvider.js"
 import { getWeather } from "./weather/WeatherProvider.js";
 import { ParksSelect } from "./parks/ParkSelect.js";
+import { StateItenPop } from './states/StateList.js';
 
 
 getEateries().then(
@@ -17,3 +18,4 @@ getWeather()
 StateSelect()
 ParksSelect()
 StateSelect()
+StateItenPop()
