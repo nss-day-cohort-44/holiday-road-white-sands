@@ -1,10 +1,18 @@
-import { getAttractions, useAttractions } from "./attractions/AttractionProvider.js";
-import { getParks, useParks } from "./parks/ParkProvider.js";
-import { getWeather } from "./weather/WeatherProvider.js";
+const eventHub = document.querySelector(".container")
+const stateSelect = document.getElementById("stateSelect")
 
-getAttractions().then(
-    () => console.log(useAttractions())
-)
+stateSelect.addEventListener("change", e => {
+    const stateID = stateSelect.value
+    const state = stateSelect.options[stateSelect.selectedIndex].text
+    const stateCode = stateSelect.options[stateSelect.selectedIndex].id
+    console.log(state, stateCode)
+    const stateBroadcast = new CustomEvent("broadcastState", {
+        detail: {
+            state: state,
+            stateCode: stateCode,
+            idNumber: stateID
 
-
-getWeather()
+        }
+    })
+    dispatchEvent(stateBroadcast)
+})
