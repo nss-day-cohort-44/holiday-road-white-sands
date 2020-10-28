@@ -20,7 +20,8 @@ export const stateChanged = () => {
 
 
 const contentElement = document.querySelector(".stateDropdown")
-export const StateSelect = () =>{
+
+export const StateSelect = () => {
 
     contentElement.innerHTML = `
     <select name="stateSelect" id="stateSelect">
