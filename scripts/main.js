@@ -3,6 +3,7 @@ import { getParks, useParks } from "./parks/ParkProvider.js";
 import { getEateries, useEateries } from "./eateries/EateryProvider.js"
 import { getWeather } from "./weather/WeatherProvider.js";
 import { StateSelect } from "./states/StateSelect.js";
+import { ParksSelect } from "./parks/ParkSelect.js";
 
 getAttractions().then(
     () => console.log(useAttractions())
@@ -18,3 +19,4 @@ console.log("hello")
 getWeather()
 
 StateSelect()
+ParksSelect()

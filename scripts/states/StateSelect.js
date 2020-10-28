@@ -1,8 +1,8 @@
 
-const contentElement = document.querySelector(".buttons")
+const contentElement = document.querySelector(".stateDropdown")
 export const StateSelect = () =>{
 
-    contentElement.innerHTML += `
+    contentElement.innerHTML = `
     <select name="stateSelect" id="stateSelect">
     <option value="0">Select a State</option>
     <option id="AL" value="1">Alabama</option>
@@ -56,14 +56,6 @@ export const StateSelect = () =>{
     <option id="WI" value="49">Wisconsin</option>
     <option id="WY" value="50">Wyoming</option>
 </select>
-<select>
-<option value="">Park</option>
-</select>
-<select>
-<option value="">Eateries</option>
-</select>
-<select>
-<option value="">Attractions</option>
-</select>
+
    ` 
 }
