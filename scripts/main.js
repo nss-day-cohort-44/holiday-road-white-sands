@@ -1,9 +1,11 @@
+import { getAttractions, useAttractions } from "./attractions/AttractionProvider.js";
 import { getParks, useParks } from "./parks/ParkProvider.js";
 import { getEateries, useEateries } from "./eateries/EateryProvider.js"
 
-getParks().then(
-    () => console.log(useParks())
+getAttractions().then(
+    () => console.log(useAttractions())
 )
+<<<<<<< HEAD
 
 getEateries().then(
     () => console.log("This is a slice of the eateries array: ", useEateries())
@@ -11,3 +13,5 @@ getEateries().then(
 
 
 console.log("hello")
+=======
+>>>>>>> master
