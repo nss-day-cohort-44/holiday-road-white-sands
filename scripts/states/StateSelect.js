@@ -1,8 +1,12 @@
 const eventHub = document.querySelector("#container")
-const contentElement = document.querySelector(".stateDropdown")
+
+
+
+
+const contentElement = document.querySelector("#stateSelect")
+
 export const StateSelect = () => {
-    contentElement.innerHTML = `
-    <select name="stateSelect" id="stateSelect">
+    contentElement.innerHTML += `
     <option value="0">Select a State</option>
     <option id="AL" value="1">Alabama</option>
     <option id="AK" value="2">Alaska</option>
@@ -54,11 +58,13 @@ export const StateSelect = () => {
     <option id="WV" value="48">West Virginia</option>
     <option id="WI" value="49">Wisconsin</option>
     <option id="WY" value="50">Wyoming</option>
-</select>
+
    ` 
-   const stateSelector = document.getElementById(stateSelect)
-   const stateChanged = () => {
-    stateSelector.addEventListener("change", e => {
+}
+
+const stateSelector = document.getElementById("stateSelect")
+
+stateSelector.addEventListener("change", e => {
         const stateID = stateSelector.value
         const state = stateSelector.options[stateSelect.selectedIndex].text
         const stateCode = stateSelector.options[stateSelect.selectedIndex].id
@@ -72,5 +78,3 @@ export const StateSelect = () => {
         })
         dispatchEvent(stateBroadcast)
     })
-   }
-}
