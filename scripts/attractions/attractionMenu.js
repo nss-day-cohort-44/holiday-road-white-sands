@@ -1,7 +1,7 @@
 import { getAttractions, useAttractions } from "./AttractionProvider.js"
 
 const state = document.getElementById("stateSelect")
-const attractionsSelect = document.getElementById("bizzarariesSelect")
+const attractionsSelect = document.querySelector(".attractionDropdown")
 const eventHub = document.querySelector(".container")
 
 const populateAttractionMenu = (stateCode) => {
@@ -10,11 +10,19 @@ const populateAttractionMenu = (stateCode) => {
         return stateObj.state = stateCode
     }))
 
-    const htmlToAssign = bizzaries.forEach(attraction => {
+    const htmlToAssign = bizzararies.map(attraction => {
         return `
             <option value="${attraction.id}">${attraction.name}> 
         `
     });
 
-    attractionsSelect.innerHTML = htmlToAssign
+    attractionsSelect.innerHTML = `<select name="attractionSelect" id="attractionSelect"> ` + htmlToAssign + `</select>`
 }
+
+eventHub.addEventListener("broadcastState", e => {
+    populateAttractionMenu(e.detail.stateCode)
+    }
+)
+
+
+
