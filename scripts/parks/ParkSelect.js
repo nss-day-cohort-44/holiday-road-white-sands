@@ -1,4 +1,5 @@
 import { getParks, useParks } from "./ParkProvider.js"
+const eventHub = document.querySelector(".parkDropdown")
 
 export const ParksSelect = () =>{
     getParks().then(()=>{
@@ -22,13 +23,13 @@ const render = parksCollection =>{
    ` 
 }
 
-eventHub.addEventListener("change", (changeEvent) => {
+eventHub.addEventListener("change", changeEvent => {
     if (changeEvent.target.id === "parkSelect") {
 
         
         const parksSelectedEvent = new CustomEvent("parksSelected", {
             detail: {
-                parkName: changeEvent.target.value
+                fullName: changeEvent.target.value
             }
         })
         console.log(parksSelectedEvent)

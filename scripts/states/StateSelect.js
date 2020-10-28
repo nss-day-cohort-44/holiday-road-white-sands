@@ -3,9 +3,9 @@ const eventHub = document.querySelector("#container")
 
 
 
-const contentElement = document.querySelector(".stateDropdown")
 
-export const StateSelect = () => {
+
+
 const contentElement = document.querySelector("#stateSelect")
 
 export const StateSelect = () => {
@@ -81,4 +81,4 @@ stateSelector.addEventListener("change", e => {
             }
         })
         dispatchEvent(stateBroadcast)
-    })}
+    })
