@@ -1,6 +1,4 @@
-
 import { stateChanged } from './states/StateSelect.js'
-
 import { getAttractions, useAttractions } from "./attractions/AttractionProvider.js";
 import { getParks, useParks } from "./parks/ParkProvider.js";
 import { getEateries, useEateries } from "./eateries/EateryProvider.js"
@@ -23,4 +21,3 @@ getWeather()
 StateSelect()
 ParksSelect()
 stateChanged()
-
