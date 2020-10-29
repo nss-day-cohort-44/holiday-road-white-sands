@@ -8,6 +8,7 @@ import { StateItenPop } from './states/StateList.js';
 import { addAttractionListener} from "./attractions/attractionMenu.js"
 import { addParkListener } from './parks/ParkList.js';
 import { AttractionItenPop } from './attractions/attractionList.js';
+import {ParkPop} from "./parks/ParkSelect.js"
 
 
 getEateries().then(
@@ -24,3 +25,4 @@ StateItenPop()
 addAttractionListener()
 addParkListener()
 AttractionItenPop()
+ParkPop()
