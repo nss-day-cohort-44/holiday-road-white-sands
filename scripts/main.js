@@ -6,12 +6,9 @@ import { getWeather } from "./weather/WeatherProvider.js";
 // import { ParksSelect } from "./parks/ParkSelect.js";
 import { StateItenPop } from './states/StateList.js';
 import { addAttractionListener} from "./attractions/attractionMenu.js"
-<<<<<<< HEAD
 import { addEateryListener, EaterySelect, populateEateriesDropdown } from './eateries/EaterySelect.js';
-=======
 import { addParkListener } from './parks/ParkList.js';
 import { AttractionItenPop } from './attractions/attractionList.js';
->>>>>>> master
 
 
 getEateries().then(
@@ -24,14 +21,11 @@ getWeather()
 StateSelect()
 // ParksSelect()
 StateSelect()
-<<<<<<< HEAD
 addAttractionListener()
 EaterySelect()
 addEateryListener()
 populateEateriesDropdown()
-=======
 StateItenPop()
 addAttractionListener()
 addParkListener()
 AttractionItenPop()
->>>>>>> master
