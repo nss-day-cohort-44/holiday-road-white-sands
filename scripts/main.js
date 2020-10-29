@@ -10,7 +10,7 @@ import { addEateryListener, EaterySelect, populateEateriesDropdown } from './eat
 import { addParkListener } from './parks/ParkList.js';
 import { AttractionItenPop } from './attractions/attractionList.js';
 import {renderAttractionsDetails} from './attractions/attractionDetails.js'
-import {eateryItenPop} from './eateries/eateryList.js'
+
 // getEateries().then(
 //     () => console.log("This is a slice of the eateries array: ", useEateries())
 // )
@@ -36,5 +36,5 @@ addAttractionListener()
 addParkListener()
 AttractionItenPop()
 renderAttractionsDetails()
-eateryItenPop()
+
 ParkPop()
