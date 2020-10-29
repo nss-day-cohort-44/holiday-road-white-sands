@@ -9,11 +9,11 @@ import { addAttractionListener} from "./attractions/attractionMenu.js"
 import { addEateryListener, EaterySelect, populateEateriesDropdown } from './eateries/EaterySelect.js';
 import { addParkListener } from './parks/ParkList.js';
 import { AttractionItenPop } from './attractions/attractionList.js';
-
-
-getEateries().then(
-    () => console.log("This is a slice of the eateries array: ", useEateries())
-)
+import {renderAttractionsDetails} from './attractions/attractionDetails.js'
+import {eateryItenPop} from './eateries/eateryList.js'
+// getEateries().then(
+//     () => console.log("This is a slice of the eateries array: ", useEateries())
+// )
 
 console.log("hello")
 StateSelect()
@@ -29,3 +29,5 @@ StateItenPop()
 addAttractionListener()
 addParkListener()
 AttractionItenPop()
+renderAttractionsDetails()
+eateryItenPop()

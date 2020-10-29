@@ -7,11 +7,11 @@ export const populateParkMenu = (stateCode) => {
     let parks = []
     getParks().then(() => {
         parks = useParks()
-        console.log(parks)
+        // console.log(parks)
         const filteredParks = parks.filter(stateObj => {
             return stateObj.states === stateCode
         })
-        console.log(filteredParks)
+        // console.log(filteredParks)
         const parkHTML = filteredParks.map(park => {
             return `
                 <option value="${park.id}">${park.fullName}</option> 
@@ -24,7 +24,7 @@ export const populateParkMenu = (stateCode) => {
 
 export const addParkListener = () => {
     eventHub.addEventListener("broadcastState", e => {
-        console.log(e.detail.stateCode)
+        // console.log(e.detail.stateCode)
         populateParkMenu(e.detail.stateCode)
         })
 }
