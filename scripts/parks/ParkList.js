@@ -7,7 +7,7 @@ export const populateParkMenu = (stateCode) => {
     let parks = []
     getParks().then(() => {
         parks = useParks()
-        console.log(parks)
+        
         const filteredParks = parks.filter(stateObj => {
             return stateObj.states === stateCode
         })

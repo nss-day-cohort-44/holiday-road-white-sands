@@ -15,11 +15,15 @@ const render = parksCollection =>{
         <option value="0">Select a Park</option>
         ${parksCollection.map(
             parksObj =>{
-                return `<option value="${parksObj.id}">${parksObj.name}</option>`
+                return `
+                <option value="${parksObj.id}">${parksObj.name}</option>
+                `
             }
         )
     }
     </select>
    ` 
 }
+
+
 
