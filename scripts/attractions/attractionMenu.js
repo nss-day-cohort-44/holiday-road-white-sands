@@ -14,7 +14,9 @@ export const populateAttractionMenu = (stateCode) => {
         console.log(filteredAttractions)
         const htmlToAssign = filteredAttractions.map(attraction => {
             return `
-                <option value="${attraction.id}">${attraction.name}</option> 
+            
+            <option value="0">Select an Attraction</option> 
+            <option value="${attraction.id}">${attraction.name}</option> 
             `
         });
         attractionsSelect.innerHTML = htmlToAssign
@@ -29,5 +31,11 @@ export const addAttractionListener = () => {
         })
 }
 
+eventHub.addEventListener("change",(event) =>{
+    if (event.target.id === "attractionSelect"){
+        const customEvent = new CustomEvent("attractionPreview", {
 
-
+        })
+        eventHub.dispatchEvent(customEvent)
+    }
+})

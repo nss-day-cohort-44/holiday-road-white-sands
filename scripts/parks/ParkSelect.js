@@ -1,5 +1,6 @@
 import { getParks, useParks } from "./ParkProvider.js"
-const eventHub = document.querySelector(".parkDropdown")
+const eventHub = document.querySelector("#container")
+const parkDropdown = document.querySelector("#parkSelect")
 
 // export const ParksSelect = () =>{
 //     getParks().then(()=>{
@@ -11,7 +12,7 @@ const contentElement = document.querySelector(".parkDropdown")
 const render = parksCollection =>{
 
     contentElement.innerHTML = `
-    <select class="parkSelect" id="parkSelect">
+    <select class="parkSelect" id="nationalPark">
         <option value="0">Select a Park</option>
         ${parksCollection.map(
             parksObj =>{
@@ -26,4 +27,13 @@ const render = parksCollection =>{
 }
 
 
+parkDropdown.addEventListener("change",(event) =>{
+    console.log("What up")
+    if (event.target.id === "parkSelect"){
+        const customEvent = new CustomEvent("parkPreview", {
+        
 
+        })
+        eventHub.dispatchEvent(customEvent)
+    }
+})
