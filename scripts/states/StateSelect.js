@@ -3,10 +3,13 @@ const eventHub = document.querySelector("#container")
 
 
 
+
+
+
 const contentElement = document.querySelector("#stateSelect")
 
 export const StateSelect = () => {
-    contentElement.innerHTML += `
+    contentElement.innerHTML = `
     <option value="0">Select a State</option>
     <option id="AL" value="1">Alabama</option>
     <option id="AK" value="2">Alaska</option>
@@ -67,14 +70,12 @@ const stateSelector = document.getElementById("stateSelect")
 stateSelector.addEventListener("change", e => {
         const stateID = stateSelector.value
         const state = stateSelector.options[stateSelect.selectedIndex].text
-        const stateCode = `${stateSelector.options[stateSelect.selectedIndex].id}`
-        console.log(state, stateCode)
+        const stateCode = stateSelector.options[stateSelect.selectedIndex].id
         const stateBroadcast = new CustomEvent("broadcastState", {
             detail: {
                 state: state,
                 stateCode: stateCode,
                 idNumber: stateID
-
             }
         })
         eventHub.dispatchEvent(stateBroadcast)

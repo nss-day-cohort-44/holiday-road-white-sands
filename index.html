@@ -19,19 +19,29 @@
                     <select name="stateSelect" id="stateSelect"></select>
                     </select>
                 </div>
-                <div class="parkDropdown"></div>
-                <div class="eateryDropdown">
-                    <select name="attractionSelect" id="attractionSelect"></select>
+                <div class="parkDropdown">
+                    <select name="parkSelect" id="parkSelect">
+                        <option value="0">Select a Park</option>
+                    </select>
                     </select>
                 </div>
                 <div class="attractionDropdown">
-                    <select name="attractionSelect" id="attractionSelect"></select>
+                    <select name="attractionSelect" id="attractionSelect">
+                        <option value="0">Select an Attraction</option>
+                    </select>
+                    </select>
+                </div>
+                <div class="eateryDropdown">
+                    <select name="eaterySelect" id="eaterySelect">
+                        <option value="0">Select an Eatery</option>
+                    </select>
                     </select>
                 </div>
             </div>
                 <div class="iteneraryPreview">
                     <h3>Itenerary Preview</h3>
-                    <p>State: Tennessee</p>
+                    <div class="stateSelected">
+                    </div>
                     <p>Park: Blah Blah Blah National Park</p>
                     <div>
                         <button>Details</button>
@@ -72,9 +82,8 @@
 
 
                     </table>
-                    <p>Attraction: BLEH</p>
-                    <div>
-                        <button>Details</button>
+                    <div class="attractionSelected">
+
                     </div>
                     <p>Eatery: Blah Blah</p>
                     <div>
