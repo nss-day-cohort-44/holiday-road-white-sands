@@ -5,6 +5,7 @@ import { getEateries, useEateries } from "./eateries/EateryProvider.js"
 import { getWeather } from "./weather/WeatherProvider.js";
 import { ParksSelect } from "./parks/ParkSelect.js";
 import { addAttractionListener} from "./attractions/attractionMenu.js"
+import { addEateryListener, EaterySelect, populateEateriesDropdown } from './eateries/EaterySelect.js';
 
 
 getEateries().then(
@@ -18,3 +19,6 @@ StateSelect()
 ParksSelect()
 StateSelect()
 addAttractionListener()
+EaterySelect()
+addEateryListener()
+populateEateriesDropdown()
