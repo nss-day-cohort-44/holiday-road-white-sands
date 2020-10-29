@@ -6,6 +6,7 @@ import { getWeather } from "./weather/WeatherProvider.js";
 // import { ParksSelect } from "./parks/ParkSelect.js";
 import { StateItenPop } from './states/StateList.js';
 import { addAttractionListener} from "./attractions/attractionMenu.js"
+import { addEateryListener, EaterySelect, populateEateriesDropdown } from './eateries/EaterySelect.js';
 import { addParkListener } from './parks/ParkList.js';
 import { AttractionItenPop } from './attractions/attractionList.js';
 
@@ -20,6 +21,10 @@ getWeather()
 StateSelect()
 // ParksSelect()
 StateSelect()
+addAttractionListener()
+EaterySelect()
+addEateryListener()
+populateEateriesDropdown()
 StateItenPop()
 addAttractionListener()
 addParkListener()
