@@ -87,7 +87,7 @@ footer{
 	margin-bottom: 1%;
 }
 
-.parkSelect{
+#parkSelect, #eaterySelect, #attractionSelect{
 	width: 150px;
 	overflow: hidden;
 	text-overflow: ellipsis;

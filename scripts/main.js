@@ -7,6 +7,7 @@ import { getWeather } from "./weather/WeatherProvider.js";
 import { StateItenPop } from './states/StateList.js';
 import { addAttractionListener} from "./attractions/attractionMenu.js"
 import { addParkListener } from './parks/ParkList.js';
+import { AttractionItenPop } from './attractions/attractionList.js';
 
 
 getEateries().then(
@@ -22,3 +23,4 @@ StateSelect()
 StateItenPop()
 addAttractionListener()
 addParkListener()
+AttractionItenPop()
