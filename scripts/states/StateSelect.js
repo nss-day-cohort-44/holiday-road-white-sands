@@ -9,7 +9,7 @@ const eventHub = document.querySelector("#container")
 const contentElement = document.querySelector("#stateSelect")
 
 export const StateSelect = () => {
-    contentElement.innerHTML += `
+    contentElement.innerHTML = `
     <option value="0">Select a State</option>
     <option id="AL" value="1">Alabama</option>
     <option id="AK" value="2">Alaska</option>
