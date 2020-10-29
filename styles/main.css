@@ -92,3 +92,20 @@ footer{
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+.weatherBox{
+	display: flex;
+	justify-content: space-between;
+	border: 2px solid black;
+	margin: 2%;
+	text-align: center;
+}
+.weatherDays, .weatherLows, .weatherHighs, .weatherPercip{
+	display: flex;
+	flex-direction: column;
+	margin: 2%;
+	text-align: center;
+}
+.weatherDays, .weatherLows, .weatherHighs{
+	border-right: 2px solid black;
+	padding-right: 10px;
+}
