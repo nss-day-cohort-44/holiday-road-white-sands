@@ -7,17 +7,11 @@ export const populateAttractionMenu = (stateCode) => {
     let attractions = []
     getAttractions().then(() => {
         attractions = useAttractions()
-<<<<<<< HEAD
-        const filteredAttractions = attractions.filter(stateObj => {
-            return stateObj.state === stateCode
-        })
-=======
         // console.log(attractions)
         const filteredAttractions = attractions.filter(stateObj => {
             return stateObj.state === stateCode
         })
         // console.log(filteredAttractions)
->>>>>>> master
         const htmlToAssign = filteredAttractions.map(attraction => {
             return `
             
@@ -32,10 +26,7 @@ export const populateAttractionMenu = (stateCode) => {
 
 export const addAttractionListener = () => {
     eventHub.addEventListener("broadcastState", e => {
-<<<<<<< HEAD
-=======
         // console.log(e.detail.stateCode)
->>>>>>> master
         populateAttractionMenu(e.detail.stateCode)
         })
 }

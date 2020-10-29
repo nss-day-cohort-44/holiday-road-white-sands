@@ -29,9 +29,6 @@ StateItenPop()
 addAttractionListener()
 addParkListener()
 AttractionItenPop()
-<<<<<<< HEAD
-=======
 renderAttractionsDetails()
 
 ParkPop()
->>>>>>> master
