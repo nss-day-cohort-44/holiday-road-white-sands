@@ -31,21 +31,13 @@ export const addParkListener = () => {
         })
 }
 
-export const ParkPop = () => {
-    eventHub.addEventListener("parkPreview" , event =>{
-        console.log("park has been changed")
-        const park = parkSelector.options[parkSelect.selectedIndex].text
-           if (park !== "Select a Park"){
-               
-               contentElement.innerHTML = `
-               <div>
-               <h3>${park}</h3>
-               <button class ="parkDetails">Details</button>
-               </div>
-               `
-            }else{
-                contentElement.innerHTML = `<p>Park:</p>`
-            }
+eventHub.addEventListener("change",(event) =>{
+    console.log("What up")
+    if (event.target.id === "parkSelect"){
+        const customEvent = new CustomEvent("parkPreview", {
         
-    })
-}
+
+        })
+        eventHub.dispatchEvent(customEvent)
+    }
+})

@@ -6,8 +6,9 @@ import { getWeather } from "./weather/WeatherProvider.js";
 // import { ParksSelect } from "./parks/ParkSelect.js";
 import { StateItenPop } from './states/StateList.js';
 import { addAttractionListener} from "./attractions/attractionMenu.js"
-import { addParkListener, ParkPop } from './parks/ParkList.js';
+import { addParkListener } from './parks/ParkList.js';
 import { AttractionItenPop } from './attractions/attractionList.js';
+import {ParkPop} from "./parks/ParkSelect.js"
 
 
 getEateries().then(
