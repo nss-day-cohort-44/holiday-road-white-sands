@@ -4,14 +4,13 @@ let weather = {}
 
 export const useWeather = () => weather
 
-export const getWeather=(zip)=>
+export const getWeather=(lat, lon)=>
 {
-    return fetch(`http://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&appid=${keys.weatherKey}`, {
+    return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=current,minutely,hourly&appid=${keys.weatherKey}`, {
         method: "GET"
     })
     .then(response=>response.json())
     .then(parsedWeather=>{
-        const weatherObject = Object.assign(weather,parsedWeather)
-        console.log(weatherObject)
+        Object.assign(weather,parsedWeather)
     })
 }

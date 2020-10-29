@@ -4,7 +4,6 @@ const attractionSelector = document.getElementById("attractionSelect")
 
 export const AttractionItenPop = () => {
     eventHub.addEventListener("attractionPreview" , event =>{
-        console.log("attraction has been changed")
         const attraction = attractionSelector.options[attractionSelect.selectedIndex].text
            if (attraction !== "Select an Attraction"){
                
