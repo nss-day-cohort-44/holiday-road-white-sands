@@ -9,6 +9,7 @@ import { addAttractionListener} from "./attractions/attractionMenu.js"
 import { addEateryListener, EaterySelect, populateEateriesDropdown } from './eateries/EaterySelect.js';
 import { addParkListener } from './parks/ParkList.js';
 import { AttractionItenPop } from './attractions/attractionList.js';
+import { EateryItenPop } from './eateries/EateryList.js';
 
 
 getEateries().then(
@@ -23,9 +24,10 @@ StateSelect()
 StateSelect()
 addAttractionListener()
 EaterySelect()
-addEateryListener()
-populateEateriesDropdown()
+// addEateryListener()
+// populateEateriesDropdown()
 StateItenPop()
 addAttractionListener()
 addParkListener()
 AttractionItenPop()
+EateryItenPop()
