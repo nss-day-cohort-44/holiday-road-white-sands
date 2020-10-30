@@ -8,10 +8,10 @@ export const EateryItenPop = () => {
         // console.log(eaterySelector)
         const eatery = eaterySelector.options[eaterySelect.selectedIndex].text
         // console.log("My eatery = " , eatery)
-           if (eatery !== "Select an Eatery:"){
+           if (eatery !== "Select an Eatery"){
                contentElement.innerHTML = `<p>Eatery: ${eatery}</p>
                <div>
-               <button class="eateryDetails">Details</button>
+               <button id="eateryDetails">Details</button>
                </div>
                `
             }else{
@@ -20,3 +20,18 @@ export const EateryItenPop = () => {
         
     })
 }
+
+eventHub.addEventListener("click", event => {
+    if (event.target.id === "eateryDetails") {
+        const customEvent = new CustomEvent ("eateryDetailButton", {
+        
+        })
+        eventHub.dispatchEvent(customEvent)
+        console.log("Eatery button was pressed")
+    }
+})
+
+eventHub.addEventListener("closeEateryDetails", event => {
+    const contentTarget = document.querySelector(".displayedEateryDetails")
+    contentTarget.style.display = "none"
+})
