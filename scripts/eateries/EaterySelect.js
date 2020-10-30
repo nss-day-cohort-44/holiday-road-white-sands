@@ -1,7 +1,7 @@
 import { getEateries, useEateries } from "./EateryProvider.js"
 
 const eventHub = document.querySelector("#container")
-const contentTarget = document.querySelector("#eaterySelect")
+const contentTarget = document.querySelector(".eateryDropdown")
 
 // Main Component
 export const EaterySelect = () => {
@@ -13,8 +13,9 @@ export const EaterySelect = () => {
 
 // Render Eatery Dropdown to DOM with values from /eateries endpoint
 const render = allEateries => {
-    contentTarget.innerHTML += `
-    
+    contentTarget.innerHTML = `
+    <select name="eateriesCollection" class="dropdown" id="eaterySelect">
+        <option value="0"> Select an eatery: </option>
         ${allEateries.map(
         eateryObj => {
             return `<option value="${eateryObj.id}">${eateryObj.businessName}</option>`
@@ -26,29 +27,8 @@ const render = allEateries => {
 }
 
 
-// Add details button functionality to Eatery in Itenerary Preview
-eventHub.addEventListener("change",(event) =>{
-    // console.log("This is my event", event)
-    if (event.target.id === "eaterySelect"){
-        // console.log("change happened")
-        const customEvent = new CustomEvent("eateryPreview", {
 
-        })
-        eventHub.dispatchEvent(customEvent)
-    }
-})
-
-
-
-
-
-
-
-
-
-
-// ALL CODE BELOW IS ONLY FOR AUTOPOPULATING EATERY DROPDOWN IN RELATION TO STATE DROPDOWN. IT WILL NOT BE USED, BUT THIS CAN BE EASILY ADDED IF NECCESSARY.
-
+// Dillon's Code
 // This CustomEvent is being sent from the stateSelect dropdown and needs to be listened for by the EaterySelect dropdown.
 
 // Reference stateSelect dropdown id
@@ -75,6 +55,7 @@ stateSelector.addEventListener("change", e => {
 })
 
 
+// TODO:
 // Add EventListener to EaterySelect dropdown that listens for "broadcastState" custom event.
 export const addEateryListener = () => {
     eventHub.addEventListener("broadcastState", e => {
@@ -103,3 +84,5 @@ export const populateEateriesDropdown = (stateCode) => {
     })
 
 }
+
+// Add details button functionality to Eatery in Itenerary Preview

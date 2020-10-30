@@ -15,14 +15,13 @@ import {renderAttractionsDetails} from './attractions/attractionDetails.js'
 //     () => console.log("This is a slice of the eateries array: ", useEateries())
 // )
 import {ParkPop} from "./parks/ParkSelect.js"
-import { EateryItenPop } from './eateries/EateryList.js';
 
 
-getEateries().then(
-    () => console.log("This is a slice of the eateries array: ", useEateries())
-)
+// getEateries().then(
+//     () => console.log("This is a slice of the eateries array: ", useEateries())
+// )
 
-console.log("hello")
+// console.log("hello")
 StateSelect()
 getWeather()
 StateSelect()
@@ -37,6 +36,5 @@ addAttractionListener()
 addParkListener()
 AttractionItenPop()
 renderAttractionsDetails()
-EateryItenPop()
 
 ParkPop()
