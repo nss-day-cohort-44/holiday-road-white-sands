@@ -10,12 +10,11 @@ const parkElement = document.querySelector(".parkSelected")
 //             render(parks)
 //     })
 // }
-const contentElement = document.querySelector(".parkDropdown")
+const contentElement = document.querySelector("#parkSelect")
 const render = parksCollection =>{
 
-    contentElement.innerHTML = `
-    <select class="parkSelect" id="parkSelect">
-        <option value="0">Select a Park</option>
+    contentElement.innerHTML += `
+    
         ${parksCollection.map(
             parksObj =>{
                 return `
@@ -24,7 +23,7 @@ const render = parksCollection =>{
             }
         )
     }
-    </select>
+
    ` 
 }
 

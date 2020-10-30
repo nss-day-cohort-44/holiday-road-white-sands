@@ -119,7 +119,7 @@ footer{
 	padding: 10px;
 }
 
-.closeAttBox, #closeEatery{
+.closeAttBox, .closeEateryDetails{
 	display: flex;
 	justify-content: center;
 	margin-bottom: 1%;
