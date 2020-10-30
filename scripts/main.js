@@ -41,8 +41,5 @@ AttractionItenPop()
 renderAttractionsDetails()
 EateryItenPop()
 ParkPop()
-<<<<<<< HEAD
 renderParkDetails()
-=======
 renderEateryDetails()
->>>>>>> master
