@@ -110,7 +110,7 @@ footer{
 	padding-right: 85px;
 }
 
-.displayedAttractionDetails{
+.displayedAttractionDetails, .displayedEateryDetails{
 	display: flex;
 	border: 2px solid black;
 	flex-direction: column;
@@ -119,7 +119,7 @@ footer{
 	padding: 10px;
 }
 
-.closeAttBox{
+.closeAttBox, #closeEatery{
 	display: flex;
 	justify-content: center;
 	margin-bottom: 1%;
