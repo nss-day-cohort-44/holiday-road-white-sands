@@ -9,8 +9,8 @@ export const populateParkMenu = (stateCode) => {
     let parks = []
     getParks().then(() => {
         parks = useParks()
-        
         const filteredParks = parks.filter(stateObj => {
+
             return stateObj.states === stateCode
         })
         // console.log(filteredParks)
@@ -19,7 +19,7 @@ export const populateParkMenu = (stateCode) => {
                 <option value="${park.id}">${park.fullName}</option> 
             `
         })
-        selectedPark.innerHTML = parkHTML
+        selectedPark.innerHTML += parkHTML
     })
 
 }

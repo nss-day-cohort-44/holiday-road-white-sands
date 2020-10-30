@@ -11,22 +11,22 @@ const parkElement = document.querySelector(".parkSelected")
 //     })
 // }
 const contentElement = document.querySelector("#parkSelect")
-const render = parksCollection =>{
+// const render = parksCollection =>{
 
-    contentElement.innerHTML += `
+//     contentElement.innerHTML = `
    
-        ${parksCollection.map(
-            parksObj =>{
-                return `
-                <option value="0">Select a Park</option> 
-                <option value="">${parksObj.name}</option>
-                `
-            }
-        )
-    }
-    </select>
-   ` 
-}
+//         ${parksCollection.map(
+//             parksObj =>{
+//                 return `
+//                 <option value="0">Select a Park</option> 
+//                 <option value="">${parksObj.name}</option>
+//                 `
+//             }
+//         )
+//     }
+//     </select>
+//    ` 
+// }
 
 
 export const ParkPop = () => {
