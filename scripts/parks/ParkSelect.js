@@ -38,7 +38,7 @@ export const ParkPop = () => {
                parkElement.innerHTML = `
                <div>
                <h3>${park}</h3>
-               <button class ="parkDetails">Details</button>
+               <button class ="parkButton">Details</button>
                </div>
                `
             }else{
@@ -47,3 +47,13 @@ export const ParkPop = () => {
         
     })
 }
+
+eventHub.addEventListener("click", event => {
+    if(event.target.id === "parkDetails") {
+        const customEvent = new CustomEvent ("parkDetailsButton",{
+
+        })
+        eventHub.dispatchEvent(customEvent)
+        console.log("park button was pressed")
+    }
+})

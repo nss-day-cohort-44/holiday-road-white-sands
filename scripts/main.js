@@ -16,6 +16,7 @@ import {renderAttractionsDetails} from './attractions/attractionDetails.js'
 // )
 import {ParkPop} from "./parks/ParkSelect.js"
 import { EateryItenPop } from './eateries/EateryPreview.js';
+import { renderParkDetails } from './parks/ParksDetail.js';
 
 
 // getEateries().then(
@@ -39,3 +40,4 @@ AttractionItenPop()
 renderAttractionsDetails()
 EateryItenPop()
 ParkPop()
+renderParkDetails()
