@@ -5,7 +5,7 @@ import { getEateries, useEateries } from "./eateries/EateryProvider.js"
 import { getWeather } from "./weather/WeatherProvider.js";
 // import { ParksSelect } from "./parks/ParkSelect.js";
 import { StateItenPop } from './states/StateList.js';
-import { addAttractionListener} from "./attractions/attractionMenu.js"
+import { attractionSelect} from "./attractions/attractionMenu.js"
 import { addEateryListener, EaterySelect, populateEateriesDropdown } from './eateries/EaterySelect.js';
 import {  addParkListener, populateParkMenu } from './parks/ParkList.js';
 import { AttractionItenPop } from './attractions/attractionList.js';
@@ -30,17 +30,19 @@ getWeather()
 StateSelect()
 // ParksSelect()
 StateSelect()
-addAttractionListener()
+// addAttractionListener()
 EaterySelect()
 // addEateryListener()
 // populateEateriesDropdown()
 StateItenPop()
-addAttractionListener()
+// addAttractionListener()
 addParkListener()
 AttractionItenPop()
 renderAttractionsDetails()
 EateryItenPop()
 ParkPop()
-renderParkDetails()
 renderEateryDetails()
+attractionSelect()
+renderParkDetails()
+// renderEateryDetails()
 populateParkMenu()

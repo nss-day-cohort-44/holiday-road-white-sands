@@ -8,7 +8,7 @@ export const AttractionItenPop = () => {
         const attraction = attractionSelector.options[attractionSelect.selectedIndex].text
            if (attraction !== "Select an Attraction"){
                
-               contentElement.innerHTML = `<p>Attraction: ${attraction}</p>
+               contentElement.innerHTML = `<p>Attraction:<h3> ${attraction}</h3></p>
                <div>
                <button id ="attractionDetails">Details</button>
                </div>
