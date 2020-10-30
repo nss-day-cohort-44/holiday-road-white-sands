@@ -1,3 +1,10 @@
 {
-	"itineraries": []
+	"itineraries": [
+		{
+			"id": 1,
+			"park": "blah",
+			"eatery": "blah",
+			"attraction": "blah",
+		}
+	]
 }
