@@ -7,7 +7,7 @@ import { getWeather } from "./weather/WeatherProvider.js";
 import { StateItenPop } from './states/StateList.js';
 import { addAttractionListener} from "./attractions/attractionMenu.js"
 import { addEateryListener, EaterySelect, populateEateriesDropdown } from './eateries/EaterySelect.js';
-import { addParkListener } from './parks/ParkList.js';
+import {  addParkListener, populateParkMenu } from './parks/ParkList.js';
 import { AttractionItenPop } from './attractions/attractionList.js';
 import {renderAttractionsDetails} from './attractions/attractionDetails.js'
 
@@ -16,6 +16,7 @@ import {renderAttractionsDetails} from './attractions/attractionDetails.js'
 // )
 import {ParkPop} from "./parks/ParkSelect.js"
 import { EateryItenPop } from './eateries/EateryPreview.js';
+import { renderParkDetails } from './parks/ParksDetail.js';
 import { renderEateryDetails } from './eateries/EateryDetails.js';
 
 
@@ -40,4 +41,6 @@ AttractionItenPop()
 renderAttractionsDetails()
 EateryItenPop()
 ParkPop()
+renderParkDetails()
 renderEateryDetails()
+populateParkMenu()
