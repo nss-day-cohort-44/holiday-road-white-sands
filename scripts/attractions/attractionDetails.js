@@ -18,11 +18,29 @@ export const renderAttractionsDetails= () =>{
         const selectedAttraction = attractionArray.find( attractionObj =>{
             return attractionObj.state === stateCode
         })
-        console.log("filtered attractions", selectedAttraction)
-        contentElement.innerHTML = `<p>Description: ${selectedAttraction.description}</p>
+        // console.log("filtered attractions", selectedAttraction)
+        contentElement.innerHTML = `
+                                    <div class ="displayedAttractionDetails">
+                                    <p>Description:</p> 
+                                    <p>${selectedAttraction.description}</p>
                                     <p>Souvenirs: ${selectedAttraction.ameneties.souvenirs}</p>
                                     <p>Restrooms: ${selectedAttraction.ameneties.restrooms}</p>
+                                    <div class="closeAttBox">
+                                    <button id="closeAtt">&times;</button>
+                                    </div>
+                                    </div>
         `
     })
+    
 
 }
+
+eventHub.addEventListener("click", (event) =>{
+    if (event.target.id === "closeAtt"){
+        const customEvent = new CustomEvent("closeAttraction", {
+
+        })
+        eventHub.dispatchEvent(customEvent)
+        
+    }
+})

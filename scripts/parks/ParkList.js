@@ -32,7 +32,7 @@ export const addParkListener = () => {
 }
 
 eventHub.addEventListener("change",(event) =>{
-    console.log("What up")
+    // console.log("What up")
     if (event.target.id === "parkSelect"){
         const customEvent = new CustomEvent("parkPreview", {
         

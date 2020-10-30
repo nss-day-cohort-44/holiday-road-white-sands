@@ -4,7 +4,7 @@ const attractionSelector = document.getElementById("attractionSelect")
 
 export const AttractionItenPop = () => {
     eventHub.addEventListener("attractionPreview" , event =>{
-        console.log("attraction has been changed")
+        // console.log("attraction has been changed")
         const attraction = attractionSelector.options[attractionSelect.selectedIndex].text
            if (attraction !== "Select an Attraction"){
                
@@ -26,6 +26,11 @@ eventHub.addEventListener("click", (event) =>{
 
         })
         eventHub.dispatchEvent(customEvent)
-        console.log("Attraction Details Button Has Been Pressed")
+        // console.log("Attraction Details Button Has Been Pressed")
     }
+})
+
+eventHub.addEventListener("closeAttraction", event =>{
+    const contentTarget = document.querySelector(".displayedAttractionDetails")
+    contentTarget.style.display = "none"
 })
