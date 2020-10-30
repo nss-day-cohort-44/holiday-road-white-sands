@@ -10,16 +10,16 @@ const parkElement = document.querySelector(".parkSelected")
 //             render(parks)
 //     })
 // }
-const contentElement = document.querySelector(".parkDropdown")
+const contentElement = document.querySelector("#parkSelect")
 const render = parksCollection =>{
 
-    contentElement.innerHTML = `
-    <select class="parkSelect" id="parkSelect">
-        <option value="0">Select a Park</option>
+    contentElement.innerHTML += `
+   
         ${parksCollection.map(
             parksObj =>{
                 return `
-                <option value="${parksObj.id}">${parksObj.name}</option>
+                <option value="0">Select a Park</option> 
+                <option value="">${parksObj.name}</option>
                 `
             }
         )
@@ -38,7 +38,7 @@ export const ParkPop = () => {
                parkElement.innerHTML = `
                <div>
                <h3>${park}</h3>
-               <button class ="parkButton">Details</button>
+               <button id="parkButton">Details</button>
                </div>
                `
             }else{
@@ -49,11 +49,16 @@ export const ParkPop = () => {
 }
 
 eventHub.addEventListener("click", event => {
-    if(event.target.id === "parkDetails") {
+    if(event.target.id === "parkButton") {
         const customEvent = new CustomEvent ("parkDetailsButton",{
 
         })
         eventHub.dispatchEvent(customEvent)
         console.log("park button was pressed")
     }
+})
+
+eventHub.addEventListener("closeParkDetails", event => {
+    const contentElement = document.querySelector(".displayedParkDetails")
+    contentElement.style.display = "none"
 })
