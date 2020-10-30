@@ -11,21 +11,22 @@ const parkElement = document.querySelector(".parkSelected")
 //     })
 // }
 const contentElement = document.querySelector("#parkSelect")
-const render = parksCollection =>{
+// const render = parksCollection =>{
 
-    contentElement.innerHTML += `
-    
-        ${parksCollection.map(
-            parksObj =>{
-                return `
-                <option value="${parksObj.id}">${parksObj.name}</option>
-                `
-            }
-        )
-    }
-
-   ` 
-}
+//     contentElement.innerHTML = `
+   
+//         ${parksCollection.map(
+//             parksObj =>{
+//                 return `
+//                 <option value="0">Select a Park</option> 
+//                 <option value="">${parksObj.name}</option>
+//                 `
+//             }
+//         )
+//     }
+//     </select>
+//    ` 
+// }
 
 
 export const ParkPop = () => {
@@ -37,7 +38,7 @@ export const ParkPop = () => {
                parkElement.innerHTML = `
                <div>
                <h3>${park}</h3>
-               <button class ="parkDetails">Details</button>
+               <button id="parkButton">Details</button>
                </div>
                `
             }else{
@@ -46,3 +47,18 @@ export const ParkPop = () => {
         
     })
 }
+
+eventHub.addEventListener("click", event => {
+    if(event.target.id === "parkButton") {
+        const customEvent = new CustomEvent ("parkDetailsButton",{
+
+        })
+        eventHub.dispatchEvent(customEvent)
+        console.log("park button was pressed")
+    }
+})
+
+eventHub.addEventListener("closeParkDetails", event => {
+    const contentElement = document.querySelector(".displayedParkDetails")
+    contentElement.style.display = "none"
+})
