@@ -108,4 +108,10 @@ footer{
 .weatherDays, .weatherLows, .weatherHighs{
 	border-right: 2px solid black;
 	padding-right: 10px;
+	display: flex;
+}
+
+.rainCondition {
+	padding-left: 1%;
+	padding-right: 1%
 }

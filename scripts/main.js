@@ -15,6 +15,7 @@ import {renderAttractionsDetails} from './attractions/attractionDetails.js'
 //     () => console.log("This is a slice of the eateries array: ", useEateries())
 // )
 import {ParkPop} from "./parks/ParkSelect.js"
+import { defaultWeather, parkSelectorActivate } from './weather/WeatherSelect.js';
 
 getEateries()
 StateSelect()
@@ -32,3 +33,5 @@ AttractionItenPop()
 renderAttractionsDetails()
 
 ParkPop()
+parkSelectorActivate()
+defaultWeather()
