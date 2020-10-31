@@ -37,7 +37,7 @@ export const ParkPop = () => {
                
                parkElement.innerHTML = `
                <div>
-               <h3>${park}</h3>
+               <p>Park: <h3>${park}</h3></p>
                <button id="parkButton">Details</button>
                </div>
                `
@@ -61,4 +61,15 @@ eventHub.addEventListener("click", event => {
 eventHub.addEventListener("closeParkDetails", event => {
     const contentElement = document.querySelector(".displayedParkDetails")
     contentElement.style.display = "none"
+})
+
+
+eventHub.addEventListener("change", event =>{
+    if(event.target.id ==="eaterySelect" && event.target.id ==="parkSelect" && event.target.id === "attractionSelect"){
+        const customEvent = new CustomEvent("enableSaveButton", {
+
+        })
+        eventHub.dispatchEvent(customEvent)
+        console.log("all three changed")
+    }
 })

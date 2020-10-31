@@ -15,14 +15,14 @@ export const renderParkDetails = () => {
         contentElement.innerHTML = `
         <div class="displayedParkDetails">
        
-        <p> ${selectedPark.description}</p>
+        <p>Description: ${selectedPark.description}</p>
         <div class="closeParkDetails">
         <button id="closePark">&times;</button>
         </div>
         </div>
-
+        
         `
-
+        // contentElement.style.backgroundImage = 'url(`${selectedPark.images[1].url}`)'
 
     })
 }

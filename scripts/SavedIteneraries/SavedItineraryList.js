@@ -1,14 +1,9 @@
 import { useSavedIten, getSavedIten } from './SavedDataProvider.js'
 import { SavedItineraryComponent } from './SavedItenerary.js'
 
-/*
- *  Purpose:
- *    To render as many journal entry components as
- *    there are items in the collection exposed by the
- *    data provider component
-//  */
-const eventHub = document.querySelector("#container")
 
+const eventHub = document.querySelector("#container")
+// a function to pass in the data retrieved from the api into the render function we formatted below
 export const SavedItineraryList = () =>{
     getSavedIten()
     .then(() =>{
@@ -17,10 +12,10 @@ export const SavedItineraryList = () =>{
     })
 }
 
-
+// a render function that takes each object in an array and loops it thru the function that creates the HTML on SavedItenerary.js
 const render = (itinArray) =>{
     
-    const contentElement = document.querySelector(".savedIteneraries")
+    const contentElement = document.querySelector("#savedIteneraries")
      let savedHTMLRep = ""
      for (const saveObject of itinArray){
          savedHTMLRep += SavedItineraryComponent(saveObject)
@@ -28,5 +23,6 @@ const render = (itinArray) =>{
         contentElement.innerHTML =`
         ${savedHTMLRep}`
     }
-
-    eventHub.addEventListener("saveStateChanged", () =>SavedItineraryList())
+    
+    // when something is added/re-render the saved itinerary section
+    eventHub.addEventListener("itineraryDataAdded", () => SavedItineraryList())

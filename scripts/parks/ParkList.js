@@ -19,7 +19,7 @@ export const populateParkMenu = (stateCode) => {
                 <option value="${park.id}">${park.fullName}</option> 
             `
         })
-        selectedPark.innerHTML += parkHTML
+        selectedPark.innerHTML = parkHTML
     })
 
 }
@@ -38,6 +38,7 @@ eventHub.addEventListener("change",(event) =>{
         
 
         })
+        
         eventHub.dispatchEvent(customEvent)
     }
 })

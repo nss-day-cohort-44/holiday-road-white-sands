@@ -1,10 +1,16 @@
 {
-	"itineraries": [
-		{
-			"id": 1,
-			"park": "blah",
-			"eatery": "blah",
-			"attraction": "blah",
-		}
-	]
+  "itineraries": [
+    {
+      "park": "Navajo National Monument",
+      "eatery": "Jack Fry's",
+      "attraction": "Giant Tattoo Needle",
+      "id": 1
+    },
+    {
+      "park": "Sunset Crater Volcano National Monument",
+      "eatery": "Commander's Palace",
+      "attraction": "Elvis Memorial Chapel",
+      "id": 2
+    }
+  ]
 }

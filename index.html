@@ -13,7 +13,7 @@
             <h1>Cool Logo</h1>
         </header>
         <section class="mainFlex">
-            <div class="buttons">
+            <div id="buttons" class="buttons">
                 <h3>Where Do You Want To Go?</h3>
                 <div class="stateDropdown">
                     <select name="stateSelect" id="stateSelect"></select>
@@ -22,6 +22,7 @@
                 <div class="parkDropdown">
                     <select name="parkSelect" id="parkSelect">
                         <option value="0">Select a Park</option>
+                        
                     </select>
                     </select>
                 </div>
@@ -42,7 +43,7 @@
                     <div class="stateSelected">
                     </div>
                     <div class="parkSelected"></div>
-                    
+                    <div class="parkDetails"></div>
                     <h3>Forecast</h3>
                     <div class="weatherBox">
                         <div class="weatherDays">
@@ -95,13 +96,15 @@
 
                     </div>
                     <div class="save">
-                        <button disabled class="saveButton">Save Itenerary</button>
+                        <button disabled id="saveButton">Save Itenerary</button>
                     </div>
                 </div>
                 <aside class="savedIteneraries">
-                    <h3>Saved Iteneraries</h3>
-                    
+                    <div>
+                        <h3>Saved Iteneraries</h3>
                     </div>
+                    <div id="savedIteneraries"></div>
+                    
                 </aside>
         </section>
         <footer>Copyright Information</footer>
