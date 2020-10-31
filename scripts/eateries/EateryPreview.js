@@ -15,12 +15,12 @@ export const EateryItenPop = () => {
                </div>
                `
             }else{
-                contentElement.innerHTML = `<p>Eatery:</p>`
+                contentElement.innerHTML = ``
             }
         
     })
 }
-
+// // ^^changed else state to reset page to default state when select an eatery is re-selected in dropdown bar
 eventHub.addEventListener("click", event => {
     if (event.target.id === "eateryDetails") {
         const customEvent = new CustomEvent ("eateryDetailButton", {

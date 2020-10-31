@@ -14,12 +14,12 @@ export const AttractionItenPop = () => {
                </div>
                `
             }else{
-                contentElement.innerHTML = `<p>Attraction:</p>`
+                contentElement.innerHTML = ``
             }
         
     })
 }
-
+// ^^changed else state to reset page to default state when select an attraction is re-selected in dropdown bar
 eventHub.addEventListener("click", (event) =>{
     if(event.target.id === "attractionDetails"){
         const customEvent = new CustomEvent("attractionDetailsButton",{

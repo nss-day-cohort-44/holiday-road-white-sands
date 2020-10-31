@@ -9,8 +9,9 @@ export const StateItenPop = () => {
 
             contentElement.innerHTML = `<p>State: <h3>${state}</h3></p>`
         }else{
-            contentElement.innerHTML = `<p>State:</p>`
+            contentElement.innerHTML = ``
         }
         
     })
     }
+    // ^^changed else state to reset page to default state when select a state is re-selected in dropdown bar

@@ -42,12 +42,12 @@ export const ParkPop = () => {
                </div>
                `
             }else{
-                parkElement.innerHTML = `<p>Park:</p>`
+                parkElement.innerHTML = ``
             }
         
     })
 }
-
+// ^^changed else state to reset page to default state when select a park is re-selected in dropdown bar
 eventHub.addEventListener("click", event => {
     if(event.target.id === "parkButton") {
         const customEvent = new CustomEvent ("parkDetailsButton",{
@@ -64,12 +64,3 @@ eventHub.addEventListener("closeParkDetails", event => {
 })
 
 
-eventHub.addEventListener("change", event =>{
-    if(event.target.id ==="eaterySelect" && event.target.id ==="parkSelect" && event.target.id === "attractionSelect"){
-        const customEvent = new CustomEvent("enableSaveButton", {
-
-        })
-        eventHub.dispatchEvent(customEvent)
-        console.log("all three changed")
-    }
-})

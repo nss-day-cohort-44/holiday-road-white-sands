@@ -13,12 +13,15 @@ export const populateParkMenu = (stateCode) => {
 
             return stateObj.states === stateCode
         })
-        // console.log(filteredParks)
-        const parkHTML = filteredParks.map(park => {
-            return `
-                <option value="${park.id}">${park.fullName}</option> 
-            `
-        })
+        // changed render function for park select to include Select a Park here, so the += is no longer required. This fixes problem with having parks not render correctly
+        const parkHTML =`<select class="parkSelect" id="parkSelect">
+        <option value="0">Select a Park</option> 
+        ${filteredParks.map(
+            park => {
+            return `<option value="${park.id}">${park.fullName}</option> `
+        }).join("")
+    }
+    </select>`
         selectedPark.innerHTML = parkHTML
     })
 

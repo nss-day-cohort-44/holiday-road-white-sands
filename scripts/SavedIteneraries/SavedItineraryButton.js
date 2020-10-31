@@ -42,10 +42,14 @@ eventHub.addEventListener("saveStateChanged", event => {
     // if the drop downs have something selected other than the zero value, then replace the disabled button with this working one
     if (parkDropDown !== "Select a Park" && eateryDropdown !== "Select an Eatery" && attractionDropdown !== "Select an Attraction") {
 
-        contentTarget.innerHTML = `<button id="saveButton">Save Itenerary</button>`
+        contentTarget.innerHTML = `<button id="saveButton">Save Itinerary</button>`
 
+    } else{
+        contentTarget.innerHTML = `<button disabled id="saveButton">Save Itinerary</button>`
     }
 })
+// ^^ else statement added on line 47 to set button back to disabled if one of the 3 required choices is reset to 0 value^^
+
 // listen for the save button to click
 eventHub.addEventListener("click", event =>{
     if(event.target.id === "saveButton"){
