@@ -15,11 +15,8 @@ import {renderAttractionsDetails} from './attractions/attractionDetails.js'
 //     () => console.log("This is a slice of the eateries array: ", useEateries())
 // )
 import {ParkPop} from "./parks/ParkSelect.js"
-<<<<<<< HEAD
 import { defaultWeather, parkSelectorActivate } from './weather/WeatherSelect.js';
-=======
 import { EateryItenPop } from './eateries/EateryList.js';
->>>>>>> master
 
 getEateries()
 StateSelect()
