@@ -28,9 +28,7 @@ const render = allEateries => {
 
 // Add details button functionality to Eatery in Itenerary Preview
 eventHub.addEventListener("change",(event) =>{
-    // console.log("This is my event", event)
     if (event.target.id === "eaterySelect"){
-        // console.log("change happened")
         const customEvent = new CustomEvent("eateryPreview", {
 
         })
@@ -62,7 +60,6 @@ stateSelector.addEventListener("change", e => {
     // stateCode refers to the id (Ex: "AL") of the selected stateSelect dropdown option
     const stateCode = `${stateSelector.options[stateSelect.selectedIndex].id}`
 
-    // console.log(state, stateCode)
     const stateBroadcast = new CustomEvent("broadcastState", {
         detail: {
             state: state,
@@ -78,7 +75,6 @@ stateSelector.addEventListener("change", e => {
 // Add EventListener to EaterySelect dropdown that listens for "broadcastState" custom event.
 export const addEateryListener = () => {
     eventHub.addEventListener("broadcastState", e => {
-        // console.log(e.detail.stateCode)
         populateEateriesDropdown(e.detail.stateCode)
     })
 }
@@ -88,11 +84,9 @@ export const populateEateriesDropdown = (stateCode) => {
     let eateries = []
     getEateries().then(() => {
         eateries = useEateries()
-        // console.log(eateries)
         const filteredEateries = eateries.filter(stateObj => {
             return stateObj.state === stateCode
         })
-        // console.log(filteredEateries)
         const htmlToAssign = filteredEateries.map(eateryObj => {
             return `
                 <select name="eateriesCollection" class="dropdown" id="eaterySelect">
