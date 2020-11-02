@@ -5,9 +5,9 @@ import { getEateries, useEateries } from "./eateries/EateryProvider.js"
 import { getWeather, useWeather } from "./weather/WeatherProvider.js";
 // import { ParksSelect } from "./parks/ParkSelect.js";
 import { StateItenPop } from './states/StateList.js';
-import { addAttractionListener} from "./attractions/attractionMenu.js"
+import { attractionSelect} from "./attractions/attractionMenu.js"
 import { addEateryListener, EaterySelect, populateEateriesDropdown } from './eateries/EaterySelect.js';
-import { addParkListener } from './parks/ParkList.js';
+import {  addParkListener, populateParkMenu } from './parks/ParkList.js';
 import { AttractionItenPop } from './attractions/attractionList.js';
 import {renderAttractionsDetails} from './attractions/attractionDetails.js'
 
@@ -16,24 +16,37 @@ import {renderAttractionsDetails} from './attractions/attractionDetails.js'
 // )
 import {ParkPop} from "./parks/ParkSelect.js"
 import { defaultWeather, parkSelectorActivate } from './weather/WeatherSelect.js';
-import { EateryItenPop } from './eateries/EateryList.js';
 
 getEateries()
+import { EateryItenPop } from './eateries/EateryPreview.js';
+import { renderParkDetails } from './parks/ParksDetail.js';
+import { renderEateryDetails } from './eateries/EateryDetails.js';
+
+
+// getEateries().then(
+//     () => console.log("This is a slice of the eateries array: ", useEateries())
+// )
+
+// console.log("hello")
 StateSelect()
 StateSelect()
 // ParksSelect()
 StateSelect()
-addAttractionListener()
+// addAttractionListener()
 EaterySelect()
 // addEateryListener()
 // populateEateriesDropdown()
 StateItenPop()
-addAttractionListener()
+// addAttractionListener()
 addParkListener()
 AttractionItenPop()
 renderAttractionsDetails()
 EateryItenPop()
-
 ParkPop()
 parkSelectorActivate()
 defaultWeather()
+renderEateryDetails()
+attractionSelect()
+renderParkDetails()
+// renderEateryDetails()
+populateParkMenu()

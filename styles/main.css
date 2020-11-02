@@ -94,7 +94,7 @@ footer{
 }
 .weatherBox{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	border: 2px solid black;
 	margin: 2%;
 	text-align: center;
@@ -113,5 +113,21 @@ footer{
 
 .rainCondition {
 	padding-left: 1%;
-	padding-right: 1%
+	padding-right: 1%;
+	padding-right: 85px;
+}
+
+.displayedAttractionDetails, .displayedEateryDetails{
+	display: flex;
+	border: 2px solid black;
+	flex-direction: column;
+	margin-top: 1%;
+	border-radius: 7px;
+	padding: 10px;
+}
+
+.closeAttBox, .closeEateryDetails{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1%;
 }

@@ -9,8 +9,8 @@ export const populateParkMenu = (stateCode) => {
     let parks = []
     getParks().then(() => {
         parks = useParks()
-        
         const filteredParks = parks.filter(stateObj => {
+
             return stateObj.states === stateCode
         })
         // console.log(filteredParks)
@@ -19,7 +19,7 @@ export const populateParkMenu = (stateCode) => {
                 <option value="${park.parkCode}">${park.fullName}</option> 
             `
         })
-        selectedPark.innerHTML = parkHTML
+        selectedPark.innerHTML += parkHTML
     })
 
 }
@@ -32,7 +32,7 @@ export const addParkListener = () => {
 }
 
 eventHub.addEventListener("change",(event) =>{
-    console.log("What up")
+    // console.log("What up")
     if (event.target.id === "parkSelect"){
         const customEvent = new CustomEvent("parkPreview", {
         
@@ -41,3 +41,4 @@ eventHub.addEventListener("change",(event) =>{
         eventHub.dispatchEvent(customEvent)
     }
 })
+
