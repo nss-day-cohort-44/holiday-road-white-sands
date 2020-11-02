@@ -11,7 +11,7 @@ export const renderParkDetails = () => {
         const selectedPark = parkArray.find(parkObj => {
             return parkObj.fullName === parkDropDown
         })
-
+        console.log(selectedPark)
         contentElement.innerHTML = `
         <div class="displayedParkDetails">
        <h4>${selectedPark.fullName}</h4>
