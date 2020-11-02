@@ -36,8 +36,8 @@ export const ParkPop = () => {
            if (park !== "Select a Park"){
                
                parkElement.innerHTML = `
-               <div>
-               <p>Park: <h3>${park}</h3></p>
+               <h3>Park: ${park}</h3>
+               <div class="centerDetails">
                <button id="parkButton">Details</button>
                </div>
                `

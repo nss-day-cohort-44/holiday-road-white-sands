@@ -37,7 +37,8 @@ export const weatherMaker = (lat, lon) => {
         const h4Nashville = document.querySelector(".h4Nashville")
         const fiveDayWeather = parkWeatherObj.daily.slice(0, 5)
         console.log(fiveDayWeather)
-
+        const parkSelector = document.getElementById("parkSelect")
+        const parkDropDown = parkSelector.options[parkSelect.selectedIndex].text
         const weatherHTML = fiveDayWeather.map(day => {
             const datept1 = day.dt * 1000
             const humanDate = new Date(datept1)
@@ -62,7 +63,7 @@ export const weatherMaker = (lat, lon) => {
         }).join("")
 
         htmlTarget.innerHTML = weatherHTML
-        h4Nashville.innerHTML = ``
+        h4Nashville.innerHTML = `<h4>${parkDropDown} Forecast</h4>`
     })
 
 }
@@ -96,7 +97,7 @@ export const defaultWeather = () => {
                 </div>
             `
         }).join("")
-        h4Target.innerHTML = `<h4>Nashville</h4>`
+        h4Target.innerHTML = `<h4>Nashville Forecast</h4>`
         htmlTarget.innerHTML += weatherHTML
     })
 }

@@ -7,7 +7,7 @@ export const StateItenPop = () => {
         const state = stateSelector.options[stateSelect.selectedIndex].text
         if (state !== "Select a State"){
 
-            contentElement.innerHTML = `<p>State: <h3>${state}</h3></p>`
+            contentElement.innerHTML = `<h3>State: ${state}</h3>`
         }else{
             contentElement.innerHTML = ``
         }

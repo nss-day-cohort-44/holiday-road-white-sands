@@ -39,8 +39,11 @@ eventHub.addEventListener("saveStateChanged", event => {
     // same for attraction
     const attractionSelector = document.getElementById("attractionSelect")
     const attractionDropdown = attractionSelector.options[attractionSelect.selectedIndex].text
+
+    const stateSelector = document.getElementById("stateSelect")
+    const state = stateSelector.options[stateSelect.selectedIndex].text
     // if the drop downs have something selected other than the zero value, then replace the disabled button with this working one
-    if (parkDropDown !== "Select a Park" && eateryDropdown !== "Select an Eatery" && attractionDropdown !== "Select an Attraction") {
+    if (parkDropDown !== "Select a Park" && eateryDropdown !== "Select an Eatery" && attractionDropdown !== "Select an Attraction" && state !== "Select a State") {
 
         contentTarget.innerHTML = `<button id="saveButton">Save Itinerary</button>`
 

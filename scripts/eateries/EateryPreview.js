@@ -9,8 +9,8 @@ export const EateryItenPop = () => {
         const eatery = eaterySelector.options[eaterySelect.selectedIndex].text
         // console.log("My eatery = " , eatery)
            if (eatery !== "Select an Eatery"){
-               contentElement.innerHTML = `<p>Eatery: <h3> ${eatery}</h3></p>
-               <div>
+               contentElement.innerHTML = `<h3>Eatery: ${eatery}</h3>
+               <div class="centerDetails">
                <button id="eateryDetails">Details</button>
                </div>
                `

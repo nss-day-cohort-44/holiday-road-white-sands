@@ -1,7 +1,7 @@
 // look for changes in the eatery, park, Or attraction dropdowns
 const eventHub = document.querySelector("#container")
 eventHub.addEventListener("change", event => {
-    if (event.target.id === "eaterySelect" || event.target.id === "parkSelect" || event.target.id === "attractionSelect") {
+    if (event.target.id === "eaterySelect" || event.target.id === "parkSelect" || event.target.id === "attractionSelect" || event.target.id === "stateSelect") {
         const customEvent = new CustomEvent ("saveStateChanged", {
             
         })

@@ -11,30 +11,6 @@
       "eatery": "DeLuca's",
       "attraction": "Luke Skywalker’s House",
       "id": 2
-    },
-    {
-      "park": "Pullman National Monument",
-      "eatery": "St. Elmo Steak House",
-      "attraction": "World’s Most Scenic Urinal",
-      "id": 3
-    },
-    {
-      "park": "Hot Springs National Park",
-      "eatery": "El Charro Cafe",
-      "attraction": "Largest Fork in the US",
-      "id": 4
-    },
-    {
-      "park": "Muscle Shoals National Heritage Area",
-      "eatery": "Big Bob Gibson Bar-B-Que",
-      "attraction": "Big White Shirt",
-      "id": 5
-    },
-    {
-      "park": "Augusta Canal National Heritage Area",
-      "eatery": "McClard's BBQ",
-      "attraction": "Big White Shirt",
-      "id": 6
     }
   ]
 }

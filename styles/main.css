@@ -143,3 +143,31 @@ footer{
 h4{
 	display: block;
 }
+
+.centerDetails{
+	display: flex;
+	justify-content: center;
+	margin-top: 2%;
+}
+
+.eaterySelected, .attractionSelected, #parkSelected{
+	display: flex;
+	flex-direction: column;
+}
+
+.parkDetails{
+	background-size: contain;
+
+}
+
+.parkImage{
+	max-width: 500px;
+	border: 2px solid black;
+}
+
+.parkImageBox{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2%;
+	
+}

@@ -65,6 +65,7 @@ export const StateSelect = () => {
    ` 
 }
 
+
 const stateSelector = document.getElementById("stateSelect")
 
 stateSelector.addEventListener("change", e => {
