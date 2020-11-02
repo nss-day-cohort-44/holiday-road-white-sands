@@ -29,6 +29,12 @@
       "eatery": "Big Bob Gibson Bar-B-Que",
       "attraction": "Big White Shirt",
       "id": 5
+    },
+    {
+      "park": "Augusta Canal National Heritage Area",
+      "eatery": "McClard's BBQ",
+      "attraction": "Big White Shirt",
+      "id": 6
     }
   ]
 }

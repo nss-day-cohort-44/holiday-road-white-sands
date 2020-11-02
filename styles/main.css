@@ -110,7 +110,14 @@ footer{
 }
 .weatherDays, .weatherLows, .weatherHighs{
 	border-right: 2px solid black;
-	padding-right: 85px;
+	padding-right: 10px;
+	display: flex;
+}
+
+.rainCondition {
+	padding-left: 1%;
+	padding-right: 1%;
+	/* padding-right: 85px; */
 }
 
 .displayedAttractionDetails, .displayedEateryDetails, .displayedParkDetails{
@@ -131,4 +138,8 @@ footer{
 
 .parkDropdown, .attractionDropdown, .eateryDropdown{
 	margin-top: 50px;
+}
+
+h4{
+	display: block;
 }
