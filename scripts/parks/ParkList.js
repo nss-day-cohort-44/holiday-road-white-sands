@@ -19,7 +19,7 @@ export const populateParkMenu = (stateCode) => {
                 <option value="${park.parkCode}">${park.fullName}</option> 
             `
         })
-        selectedPark.innerHTML += parkHTML
+        selectedPark.innerHTML = parkHTML
     })
 
 }

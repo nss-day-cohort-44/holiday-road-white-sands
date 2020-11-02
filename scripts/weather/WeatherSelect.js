@@ -95,6 +95,6 @@ export const defaultWeather = () => {
             `
         }).join("")
 
-        htmlTarget.innerHTML = weatherHTML
+        htmlTarget.innerHTML += weatherHTML
     })
 }
