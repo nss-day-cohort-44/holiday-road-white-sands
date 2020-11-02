@@ -16,6 +16,7 @@ export const renderEateryDetails = () => {
 
         contentTarget.innerHTML = `
         <div class="displayedEateryDetails">
+        <h4>${selectedEatery.businessName}</h4>
         <p>Description: ${selectedEatery.description}</p>
         <p>Wheelchair Accessibility: ${selectedEatery.ameneties.wheelchairAccessible}</p>
         <p>Pet Friendly: ${selectedEatery.ameneties.petFriendly}</p>

@@ -11,18 +11,22 @@ export const renderParkDetails = () => {
         const selectedPark = parkArray.find(parkObj => {
             return parkObj.fullName === parkDropDown
         })
-
+        console.log(selectedPark)
         contentElement.innerHTML = `
         <div class="displayedParkDetails">
-       
-        <p> ${selectedPark.description}</p>
+       <h4>${selectedPark.fullName}</h4>
+        <p>Description: ${selectedPark.description}</p>
+        <div class ="parkImageBox">
+        <img class ="parkImage" src="${selectedPark.images[0].url}">
+        </div>
         <div class="closeParkDetails">
         <button id="closePark">&times;</button>
         </div>
         </div>
-
+        
         `
-
+        console.log(selectedPark.images[0].url)
+     
 
     })
 }

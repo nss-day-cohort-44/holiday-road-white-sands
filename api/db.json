@@ -1,3 +1,16 @@
 {
-	"itineraries": []
+  "itineraries": [
+    {
+      "park": "Navajo National Monument",
+      "eatery": "Jack Fry's",
+      "attraction": "Giant Tattoo Needle",
+      "id": 1
+    },
+    {
+      "park": "Bering Land Bridge National Preserve",
+      "eatery": "DeLuca's",
+      "attraction": "Luke Skywalker’s House",
+      "id": 2
+    }
+  ]
 }

@@ -20,8 +20,9 @@ h2,h3,h4,h5,h6 {
 }
 
 header{
-	padding-left: 3%;
-	border-bottom: 3px solid black;
+
+	border-bottom: 3px solid #eb6e4b;
+	border-radius: 10px;
 }
 
 
@@ -33,9 +34,10 @@ header{
 .buttons{
 	display: flex;
 	flex-direction: column;
-	border-right: 3px solid black;
+	border-right: 3px solid #eb6e4b;
 	max-width: 250px;
 	min-width: 250px;
+	border-radius: 10px;
 }
 
 .mainFlex{
@@ -46,7 +48,8 @@ header{
 .savedIteneraries{
 	flex-basis: 80%;
 	padding-left: 50px;
-	border-left: 3px solid black;
+	border-left: 3px solid #eb6e4b;
+	border-radius: 10px;
 }
 
 footer{
@@ -65,6 +68,7 @@ footer{
 .save{
 	display: flex;
 	justify-content: center;
+	margin-top: 2%;
 }
 
 .saveButton{
@@ -76,9 +80,13 @@ footer{
 } */
 
 .savedCard{
-	border: 3px solid black;
+	border: 2px solid black;
 	border-radius: 10px;
-
+	padding: 5px;
+	margin-top: 10px;
+	text-align: center;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+	background: radial-gradient(ellipse at center,transparent 10%,#badfdb 100%);
 }
 
 .access{
@@ -91,6 +99,7 @@ footer{
 	width: 150px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+
 }
 .weatherBox{
 	display: flex;
@@ -98,6 +107,9 @@ footer{
 	border: 2px solid black;
 	margin: 2%;
 	text-align: center;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+	background: radial-gradient(ellipse at center,transparent 10%,#badfdb 100%);
+	border-radius: 10px
 }
 .weatherDays, .weatherLows, .weatherHighs, .weatherPercip{
 	display: flex;
@@ -114,20 +126,82 @@ footer{
 .rainCondition {
 	padding-left: 1%;
 	padding-right: 1%;
-	padding-right: 85px;
+	/* padding-right: 85px; */
 }
 
-.displayedAttractionDetails, .displayedEateryDetails{
+.displayedAttractionDetails, .displayedEateryDetails, .displayedParkDetails{
 	display: flex;
 	border: 2px solid black;
 	flex-direction: column;
 	margin-top: 1%;
 	border-radius: 7px;
 	padding: 10px;
+	max-width: 825px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+	background: radial-gradient(ellipse at center,transparent 10%,#badfdb 100%);
+	border-radius: 10px
 }
 
-.closeAttBox, .closeEateryDetails{
+.closeAttBox, .closeEateryDetails, .closeParkDetails{
 	display: flex;
 	justify-content: center;
 	margin-bottom: 1%;
+}
+
+.parkDropdown, .attractionDropdown, .eateryDropdown{
+	margin-top: 50px;
+}
+
+h4{
+	display: block;
+}
+
+.centerDetails{
+	display: flex;
+	justify-content: center;
+	margin-top: 2%;
+}
+
+.eaterySelected, .attractionSelected, #parkSelected{
+	display: flex;
+	flex-direction: column;
+}
+
+.parkDetails{
+	background-size: contain;
+
+}
+
+.parkImage{
+	max-width: 500px;
+	border: 2px solid black;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+}
+
+.parkImageBox{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2%;
+	
+}
+
+body{
+	background-color: #e3efe4;
+}
+
+#stateSelect, #parkSelect, #attractionSelect, #eaterySelect{
+	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.6);
+	background: radial-gradient(ellipse at center,transparent 10%,#badfdb 100%);
+	border-radius: 10px
+}
+
+button{
+	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.6);
+	background: radial-gradient(ellipse at center,transparent 10%,#eb6e4b 100%);
+	border-radius: 10px;
+	padding: 6px;
+}
+
+.logo{
+	max-height: 100px;
 }

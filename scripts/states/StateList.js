@@ -7,10 +7,11 @@ export const StateItenPop = () => {
         const state = stateSelector.options[stateSelect.selectedIndex].text
         if (state !== "Select a State"){
 
-            contentElement.innerHTML = `<p>State: ${state}</p>`
+            contentElement.innerHTML = `<h3>State: ${state}</h3>`
         }else{
-            contentElement.innerHTML = `<p>State:</p>`
+            contentElement.innerHTML = ``
         }
         
     })
     }
+    // ^^changed else state to reset page to default state when select a state is re-selected in dropdown bar

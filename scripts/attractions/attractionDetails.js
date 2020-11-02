@@ -21,8 +21,8 @@ export const renderAttractionsDetails= () =>{
         // console.log("filtered attractions", selectedAttraction)
         contentElement.innerHTML = `
                                     <div class ="displayedAttractionDetails">
-                                    <p>Description:</p> 
-                                    <p>${selectedAttraction.description}</p>
+                                    <h4>${selectedAttraction.name}</h4>
+                                    <p> Description: ${selectedAttraction.description}</p>
                                     <p>Souvenirs: ${selectedAttraction.ameneties.souvenirs}</p>
                                     <p>Restrooms: ${selectedAttraction.ameneties.restrooms}</p>
                                     <div class="closeAttBox">

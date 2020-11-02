@@ -21,6 +21,8 @@ getEateries()
 import { EateryItenPop } from './eateries/EateryPreview.js';
 import { renderParkDetails } from './parks/ParksDetail.js';
 import { renderEateryDetails } from './eateries/EateryDetails.js';
+import { SavedItineraryList } from './SavedIteneraries/SavedItineraryList.js';
+import './SavedIteneraries/SavedItineraryButton.js'
 
 
 // getEateries().then(
@@ -50,3 +52,5 @@ attractionSelect()
 renderParkDetails()
 // renderEateryDetails()
 populateParkMenu()
+
+SavedItineraryList()

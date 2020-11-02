@@ -18,7 +18,7 @@ export const StateSelect = () => {
     <option id="CA" value="5">California</option>
     <option id="CO" value="6">Colorado</option>
     <option id="CT" value="7">Connecticut</option>
-    <option id="DE" value="8">Deleware</option>
+    <option id="DE" value="8">Delaware</option>
     <option id="FL" value="9">Florida</option>
     <option id="GA" value="10">Georgia</option>
     <option id="HI" value="11">Hawaii</option>
@@ -64,6 +64,7 @@ export const StateSelect = () => {
 
    ` 
 }
+
 
 const stateSelector = document.getElementById("stateSelect")
 

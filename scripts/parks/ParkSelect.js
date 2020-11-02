@@ -36,18 +36,18 @@ export const ParkPop = () => {
            if (park !== "Select a Park"){
                
                parkElement.innerHTML = `
-               <div>
-               <h3>${park}</h3>
+               <h3>Park: ${park}</h3>
+               <div class="centerDetails">
                <button id="parkButton">Details</button>
                </div>
                `
             }else{
-                parkElement.innerHTML = `<p>Park:</p>`
+                parkElement.innerHTML = ``
             }
         
     })
 }
-
+// ^^changed else state to reset page to default state when select a park is re-selected in dropdown bar
 eventHub.addEventListener("click", event => {
     if(event.target.id === "parkButton") {
         const customEvent = new CustomEvent ("parkDetailsButton",{
@@ -62,3 +62,5 @@ eventHub.addEventListener("closeParkDetails", event => {
     const contentElement = document.querySelector(".displayedParkDetails")
     contentElement.style.display = "none"
 })
+
+
