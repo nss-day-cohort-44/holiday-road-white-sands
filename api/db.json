@@ -11,6 +11,12 @@
       "eatery": "DeLuca's",
       "attraction": "Luke Skywalker’s House",
       "id": 2
+    },
+    {
+      "park": "Pullman National Monument",
+      "eatery": "St. Elmo Steak House",
+      "attraction": "World’s Most Scenic Urinal",
+      "id": 3
     }
   ]
 }
