@@ -18,7 +18,6 @@ export const renderAttractionsDetails= () =>{
         const selectedAttraction = attractionArray.find( attractionObj =>{
             return attractionObj.name === attractionDropdown
         })
-        // console.log("filtered attractions", selectedAttraction)
         contentElement.innerHTML = `
                                     <div class ="displayedAttractionDetails">
                                     <h4>${selectedAttraction.name}</h4>

@@ -4,10 +4,7 @@ const eaterySelector = document.querySelector("#eaterySelect")
 
 export const EateryItenPop = () => {
     eventHub.addEventListener("eateryPreview" , event => {
-        // console.log("eatery has been changed", event)
-        // console.log(eaterySelector)
         const eatery = eaterySelector.options[eaterySelect.selectedIndex].text
-        // console.log("My eatery = " , eatery)
            if (eatery !== "Select an Eatery"){
                contentElement.innerHTML = `<h3>Eatery: ${eatery}</h3>
                <div class="centerDetails">
