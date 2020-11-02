@@ -11,6 +11,12 @@
       "eatery": "DeLuca's",
       "attraction": "Luke Skywalker’s House",
       "id": 2
+    },
+    {
+      "park": "Tuskegee Institute National Historic Site",
+      "eatery": "Buckhorn Exchange",
+      "attraction": "Giant Tattoo Needle",
+      "id": 3
     }
   ]
 }
