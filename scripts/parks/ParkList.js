@@ -16,10 +16,10 @@ export const populateParkMenu = (stateCode) => {
         // console.log(filteredParks)
         const parkHTML = filteredParks.map(park => {
             return `
-                <option value="${park.id}">${park.fullName}</option> 
+                <option value="${park.parkCode}">${park.fullName}</option> 
             `
         })
-        selectedPark.innerHTML += parkHTML
+        selectedPark.innerHTML = parkHTML
     })
 
 }
