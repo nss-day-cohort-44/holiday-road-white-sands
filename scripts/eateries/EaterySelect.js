@@ -2,6 +2,8 @@ import { getEateries, useEateries } from "./EateryProvider.js"
 
 const eventHub = document.querySelector("#container")
 const contentTarget = document.querySelector("#eaterySelect")
+const eaterySelector = document.querySelector("#eaterySelect")
+
 
 // Main Component
 export const EaterySelect = () => {
@@ -30,7 +32,9 @@ const render = allEateries => {
 eventHub.addEventListener("change",(event) =>{
     if (event.target.id === "eaterySelect"){
         const customEvent = new CustomEvent("eateryPreview", {
-
+            detail: {
+                eatery: eaterySelector.options[eaterySelect.selectedIndex].text
+            }
         })
         eventHub.dispatchEvent(customEvent)
     }

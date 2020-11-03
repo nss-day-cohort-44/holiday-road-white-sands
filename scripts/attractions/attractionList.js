@@ -5,7 +5,7 @@ const attractionSelector = document.getElementById("attractionSelect")
 export const AttractionItenPop = () => {
     eventHub.addEventListener("attractionPreview" , event =>{
         // console.log("attraction has been changed")
-        const attraction = attractionSelector.options[attractionSelect.selectedIndex].text
+        const attraction = event.detail.attraction
            if (attraction !== "Select an Attraction"){
                
                contentElement.innerHTML = `<h3>Attraction: ${attraction}</h3>
@@ -23,7 +23,9 @@ export const AttractionItenPop = () => {
 eventHub.addEventListener("click", (event) =>{
     if(event.target.id === "attractionDetails"){
         const customEvent = new CustomEvent("attractionDetailsButton",{
-
+            detail: {
+                dropdown: attractionSelector.options[attractionSelect.selectedIndex].text
+            }
         })
         eventHub.dispatchEvent(customEvent)
     

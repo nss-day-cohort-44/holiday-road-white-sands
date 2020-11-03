@@ -1,9 +1,22 @@
 // look for changes in the eatery, park, Or attraction dropdowns
 const eventHub = document.querySelector("#container")
+const parkSelector = document.getElementById("parkSelect")
+const eaterySelector = document.getElementById("eaterySelect")
+const attractionSelector = document.getElementById("attractionSelect")
+const stateSelector = document.getElementById("stateSelect")
+
+
+
+
 eventHub.addEventListener("change", event => {
     if (event.target.id === "eaterySelect" || event.target.id === "parkSelect" || event.target.id === "attractionSelect" || event.target.id === "stateSelect") {
         const customEvent = new CustomEvent ("saveStateChanged", {
-            
+            detail: {
+                parkDropdown: parkSelector.options[parkSelect.selectedIndex].text,
+                eateryDropdown: eaterySelector.options[eaterySelect.selectedIndex].text,
+                attractionDropdown: attractionSelector.options[attractionSelect.selectedIndex].text,
+                state: stateSelector.options[stateSelect.selectedIndex].text
+            }
         })
         console.log("change event triggered")
         eventHub.dispatchEvent(customEvent)
