@@ -1,38 +1,9 @@
 import { getAttractions, useAttractions } from "./AttractionProvider.js"
-// makes attractions dependent on state in dropdown menu
-// const attractionsSelect = document.querySelector("#attractionSelect")
-// const eventHub = document.querySelector("#container")
 
-// export const populateAttractionMenu = (stateCode) => {
-//     let attractions = []
-//     getAttractions().then(() => {
-//         attractions = useAttractions()
-//         // console.log(attractions)
-//         const filteredAttractions = attractions.filter(stateObj => {
-//             return stateObj.state === stateCode
-//         })
-//         // console.log(filteredAttractions)
-//         const htmlToAssign = filteredAttractions.map(attraction => {
-//             return `
-            
-//             <option value="0">Select an Attraction</option> 
-//             <option value="${attraction.id}">${attraction.name}</option> 
-//             `
-//         });
-//         attractionsSelect.innerHTML = htmlToAssign
-//     })
-
-// }
-
-// export const addAttractionListener = () => {
-//     eventHub.addEventListener("broadcastState", e => {
-//         // console.log(e.detail.stateCode)
-//         populateAttractionMenu(e.detail.stateCode)
-//         })
-// }
-
-// making all attractions pop up in dropdown menu
 const eventHub = document.querySelector("#container")
+const attractionSelector = document.getElementById("attractionSelect")
+
+
 export const attractionSelect = () => {
     getAttractions().then(() => {
         const allAttractions = useAttractions()
@@ -56,7 +27,11 @@ const render = allAttractions => {
 
 eventHub.addEventListener("change",(event) =>{
     if (event.target.id === "attractionSelect"){
+        console.log(attractionSelector.options)
         const customEvent = new CustomEvent("attractionPreview", {
+            detail: {
+                attraction: attractionSelector.options[attractionSelector.selectedIndex].text
+            }
 
         })
         eventHub.dispatchEvent(customEvent)

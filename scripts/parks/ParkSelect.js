@@ -32,11 +32,11 @@ const contentElement = document.querySelector("#parkSelect")
 export const ParkPop = () => {
     eventHub.addEventListener("parkPreview" , event =>{
         console.log("park has been changed")
-        const park = parkSelect.options[parkSelect.selectedIndex].text
-           if (park !== "Select a Park"){
+        const park = event.detail.park
+           if (park !== "0"){
                
                parkElement.innerHTML = `
-               <h3>Park: ${park}</h3>
+               <h3>Park: ${event.detail.parkName}</h3>
                <div class="centerDetails">
                <button id="parkButton">Details</button>
                </div>
@@ -51,7 +51,10 @@ export const ParkPop = () => {
 eventHub.addEventListener("click", event => {
     if(event.target.id === "parkButton") {
         const customEvent = new CustomEvent ("parkDetailsButton",{
-
+            detail: {
+                park: parkSelect.options[parkSelect.selectedIndex].value,
+                parkName: parkSelect.options[parkSelect.selectedIndex].text
+            }
         })
         eventHub.dispatchEvent(customEvent)
         console.log("park button was pressed")

@@ -12,8 +12,7 @@ const eventHub = document.querySelector("#container")
 
 export const renderAttractionsDetails= () =>{
     eventHub.addEventListener("attractionDetailsButton", event => {
-        const attractionSelector = document.getElementById("attractionSelect")
-        const attractionDropdown = attractionSelector.options[attractionSelect.selectedIndex].text
+        const attractionDropdown = event.detail.dropdown
         const attractionArray = useAttractions()
         const selectedAttraction = attractionArray.find( attractionObj =>{
             return attractionObj.name === attractionDropdown

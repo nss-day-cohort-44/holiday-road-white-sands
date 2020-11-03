@@ -2,7 +2,7 @@ import { getParks, useParks } from "./ParkProvider.js"
 
 const selectedPark = document.querySelector("#parkSelect")
 const eventHub = document.querySelector("#container")
-const parkSelector = document.getElementById("parkSelect")
+const parkSelect = document.getElementById("parkSelect")
 const contentElement = document.querySelector(".parkSelected")
 
 export const populateParkMenu = (stateCode) => {
@@ -36,7 +36,10 @@ export const addParkListener = () => {
 eventHub.addEventListener("change",(event) =>{
     if (event.target.id === "parkSelect"){
         const customEvent = new CustomEvent("parkPreview", {
-        
+            detail: {
+                park: parkSelect.options[parkSelect.selectedIndex].value,
+                parkName: parkSelect.options[parkSelect.selectedIndex].text
+            }
 
         })
         

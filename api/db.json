@@ -23,6 +23,18 @@
       "eatery": "Joe's Stone Crab",
       "attraction": "World’s Most Scenic Urinal",
       "id": 4
+    },
+    {
+      "park": "Grand Canyon National Park",
+      "eatery": "Marge's Pancake House",
+      "attraction": "Elvis Memorial Chapel",
+      "id": 5
+    },
+    {
+      "park": "Great Sand Dunes National Park & Preserve",
+      "eatery": "McClard's BBQ",
+      "attraction": "Giant Tattoo Needle",
+      "id": 6
     }
   ]
 }
