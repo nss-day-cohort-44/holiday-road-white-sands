@@ -37,7 +37,7 @@ eventHub.addEventListener("saveStateChanged", event => {
         contentTarget.innerHTML = `<button id="saveButton">Save Itinerary</button>`
 
     } else{
-        contentTarget.innerHTML = `<button disabled id="saveButton">Save Itinerary</button>`
+        contentTarget.innerHTML = `<button disabled class="disabledButton" id="saveButton">Save Itinerary</button>`
     }
 })
 // ^^ else statement added on line 47 to set button back to disabled if one of the 3 required choices is reset to 0 value^^
