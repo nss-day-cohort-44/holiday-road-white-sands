@@ -4,7 +4,7 @@ const eaterySelector = document.querySelector("#eaterySelect")
 
 export const EateryItenPop = () => {
     eventHub.addEventListener("eateryPreview" , event => {
-        const eatery = eaterySelector.options[eaterySelect.selectedIndex].text
+        const eatery = event.detail.eatery
            if (eatery !== "Select an Eatery"){
                contentElement.innerHTML = `<h3>Eatery: ${eatery}</h3>
                <div class="centerDetails">
@@ -21,7 +21,9 @@ export const EateryItenPop = () => {
 eventHub.addEventListener("click", event => {
     if (event.target.id === "eateryDetails") {
         const customEvent = new CustomEvent ("eateryDetailButton", {
-        
+            detail: {
+                eateryDropdown: eaterySelector.options[eaterySelect.selectedIndex].text
+            }
         })
         eventHub.dispatchEvent(customEvent)
         console.log("Eatery button was pressed")

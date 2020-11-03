@@ -30,20 +30,9 @@ eventHub.addEventListener("click", clickEvent => {
 
 // listen for changes in the eatery, park, or attraction dropdowns
 eventHub.addEventListener("saveStateChanged", event => {
-    // getting the text currently selected in the parkdrop down bar
-    const parkSelector = document.getElementById("parkSelect")
-    const parkDropDown = parkSelector.options[parkSelect.selectedIndex].text
-    // same for eatery
-    const eaterySelector = document.getElementById("eaterySelect")
-    const eateryDropdown = eaterySelector.options[eaterySelect.selectedIndex].text
-    // same for attraction
-    const attractionSelector = document.getElementById("attractionSelect")
-    const attractionDropdown = attractionSelector.options[attractionSelect.selectedIndex].text
 
-    const stateSelector = document.getElementById("stateSelect")
-    const state = stateSelector.options[stateSelect.selectedIndex].text
     // if the drop downs have something selected other than the zero value, then replace the disabled button with this working one
-    if (parkDropDown !== "Select a Park" && eateryDropdown !== "Select an Eatery" && attractionDropdown !== "Select an Attraction" && state !== "Select a State") {
+    if (event.detail.parkDropdown !== "Select a Park" && event.detail.eateryDropdown !== "Select an Eatery" && event.detail.attractionDropdown !== "Select an Attraction" && event.detail.state !== "Select a State") {
 
         contentTarget.innerHTML = `<button id="saveButton">Save Itinerary</button>`
 
@@ -53,13 +42,4 @@ eventHub.addEventListener("saveStateChanged", event => {
 })
 // ^^ else statement added on line 47 to set button back to disabled if one of the 3 required choices is reset to 0 value^^
 
-// listen for the save button to click
-eventHub.addEventListener("click", event =>{
-    if(event.target.id === "saveButton"){
-        const customEvent = new CustomEvent ("renderSave",{
-
-        })
-        eventHub.dispatchEvent(customEvent)
-    }
-})
 

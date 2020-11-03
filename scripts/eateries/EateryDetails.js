@@ -1,5 +1,4 @@
 import { useEateries } from "./EateryProvider.js"
-import { EaterySelect } from "./EaterySelect.js"
 
 const eventHub = document.querySelector("#container")
 const contentTarget = document.querySelector(".eateryDetails")
@@ -7,8 +6,7 @@ const contentTarget = document.querySelector(".eateryDetails")
 export const renderEateryDetails = () => {
     eventHub.addEventListener("eateryDetailButton", event => {
 
-        const eaterySelector = document.getElementById("eaterySelect") // Change const name
-        const eateryDropdown = eaterySelector.options[eaterySelect.selectedIndex].text // Change const name
+        const eateryDropdown = event.detail.eateryDropdown // Change const name
         const eateryArray = useEateries()
         const selectedEatery = eateryArray.find(eateryObj => {
             return eateryObj.businessName === eateryDropdown
@@ -35,7 +33,7 @@ export const renderEateryDetails = () => {
 eventHub.addEventListener("click", event => {
     if (event.target.id === "closeEatery") {
         const customEvent = new CustomEvent ("closeEateryDetails", {
-
+            
         })
         eventHub.dispatchEvent(customEvent)
         console.log("Dispatching closeEateryDetails")
