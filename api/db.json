@@ -13,10 +13,16 @@
       "id": 2
     },
     {
-      "park": "Tuskegee Institute National Historic Site",
-      "eatery": "Buckhorn Exchange",
-      "attraction": "Giant Tattoo Needle",
+      "park": "Great Sand Dunes National Park & Preserve",
+      "eatery": "Louis' Lunch",
+      "attraction": "Largest Fork in the US",
       "id": 3
+    },
+    {
+      "park": "Curecanti National Recreation Area",
+      "eatery": "Joe's Stone Crab",
+      "attraction": "World’s Most Scenic Urinal",
+      "id": 4
     }
   ]
 }

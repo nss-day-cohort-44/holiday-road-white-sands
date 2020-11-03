@@ -29,13 +29,11 @@ export const populateParkMenu = (stateCode) => {
 
 export const addParkListener = () => {
     eventHub.addEventListener("broadcastState", e => {
-        // console.log(e.detail.stateCode)
         populateParkMenu(e.detail.stateCode)
         })
 }
 
 eventHub.addEventListener("change",(event) =>{
-    // console.log("What up")
     if (event.target.id === "parkSelect"){
         const customEvent = new CustomEvent("parkPreview", {
         
