@@ -200,8 +200,16 @@ button{
 	background: radial-gradient(ellipse at center,transparent 10%,#eb6e4b 100%);
 	border-radius: 10px;
 	padding: 6px;
+	margin-bottom: 2%;
 }
 
 .logo{
 	max-height: 100px;
+}
+
+.disabledButton{
+	background: radial-gradient(ellipse at center,transparent 10%, dimgrey 100%);
+	border-radius: 10px;
+	padding: 6px;
+	box-shadow: 0px 0px 0px 0px;
 }
